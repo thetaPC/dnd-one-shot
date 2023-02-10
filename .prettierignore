@@ -1,0 +1,6 @@
+build
+coverage
+out
+.next
+.vscode
+package-lock.json
