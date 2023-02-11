@@ -1,7 +1,7 @@
-name: Format Check
+name: Check
 on: [push]
 jobs:
-  format_check:
+  format:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
