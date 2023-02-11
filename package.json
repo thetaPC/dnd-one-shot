@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write ."
+    "lint": "next lint --fix",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.9",
@@ -26,6 +27,8 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
     "prettier": "2.8.4"
   }
 }
