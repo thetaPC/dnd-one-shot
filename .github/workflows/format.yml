@@ -1,7 +1,7 @@
 name: Format Check
 on: [push]
 jobs:
-  setup:
+  format_check:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
@@ -16,10 +16,6 @@ jobs:
         run: node -v
       - name: Install Dependencies
         run: npm install
-  eslint:
-    needs: [setup]
-    runs-on: ubuntu-latest
-    steps:
       - name: Run prettier
         run: npm run format:check
       - name: Run eslint
