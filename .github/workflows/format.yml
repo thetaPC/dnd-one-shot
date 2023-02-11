@@ -1,21 +1,24 @@
-name: Formatting
+name: Format Check
 on: [push]
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+      steps:
+        - name: Code Checkout
+          uses: actions/checkout@v3
+        - name: List directories and files
+          run: ls
+        - name: Setup Node
+          uses: actions/setup-node@v3
+          with:
+            node-version: latest
+        - name: Node version
+          run: node -v
+        - name: Install Dependencies
+          run: npm install
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: Code Checkout
-        uses: actions/checkout@v3
-      - name: List directories and files
-        run: ls
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: latest
-      - name: Node version
-        run: node -v
-      - name: Install Dependencies
-        run: npm install
       - name: Run prettier
         run: npm run format:check
       - name: Run eslint
