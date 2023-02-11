@@ -1,6 +1,3 @@
 {
-  "*.{js,jsx,ts,tsx}": [
-    "npm run format:check",
-    "eslint"
-  ]
+  "*.{js,jsx,ts,tsx}": ["npm run format", "eslint --fix", "git add ."]
 }
