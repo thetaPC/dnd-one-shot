@@ -3,4 +3,5 @@ coverage
 out
 .next
 .vscode
+.github
 package-lock.json
